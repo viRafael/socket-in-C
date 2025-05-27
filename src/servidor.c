@@ -6,18 +6,18 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <stdbool.h>
 
 // Constantes
-const int PORTA = 12012;
-const int NUM_CLIENTES = 1;
+const int PORTA = 8489;
+const int NUM_CLIENTES = 3;
 const int BUFFER_SIZE = 1024;
 
 //Funções auxiliares
 char *charDestuffing(const char *mensagem) {
+    char *nova_mensagem = NULL;
     const char *prefixo = "~";
     size_t tamanhoPrefixo = strlen(prefixo);
-
-    char *nova_mensagem = NULL;
     size_t tamanhoOriginal = strlen(mensagem);
 
     size_t tamanhoSemPrefixo = tamanhoOriginal - tamanhoPrefixo;
@@ -52,7 +52,10 @@ int main() {
     // Declaração de variáveis
     int servidor, cliente;
     struct sockaddr_in server_addr, cliente_addr;
+
+    // Inicialização
     char buffer[BUFFER_SIZE];
+    FILE *out_file;
 
     // 1- Criar um socket
     servidor = socket(AF_INET, SOCK_STREAM, 0);
@@ -80,27 +83,54 @@ int main() {
     }
     printf("Socket-servidor escutando com sucesso na porta %d\n", PORTA);
 
-    // 4- Aceitar conexões de clientes
-    socklen_t cliente_len;
+    while(true) {
+        // 4- Aceitar conexões de clientes
+        socklen_t cliente_len;
 
-    cliente_len = sizeof(cliente_addr);
-    cliente = accept(servidor, (struct sockaddr*)&cliente_addr, &cliente_len);
-    if (cliente < 0) {
-        perror("Erro ao aceitar conexao do cliente");
-        exit(1);
+        cliente_len = sizeof(cliente_addr);
+        cliente = accept(servidor, (struct sockaddr*)&cliente_addr, &cliente_len);
+        if (cliente < 0) {
+            perror("Erro ao aceitar conexao do cliente");
+            exit(1);
+        }
+        printf("Cliente conectado com sucesso!\n");
+
+        // Receber a mensagem "READY" do cliente
+        receberMensagem(cliente, buffer);
+
+        // Caso a mensagem recebida seja "READY"
+        if (strcmp(buffer, "READY") == 0) {
+            // Enviar a mensagem "READY ACK" para o cliente
+            enviarMensagem(cliente, buffer, "READY ACK");
+
+            // TODO: Implementar a corretamente a criação do nome do arquivo (<host><diretorio>)
+            out_file = fopen("localhost:dir", "w");
+            if(out_file == NULL){
+                perror("Servidor falhou em criar/abrir o arquivo");
+                return 1;
+            }
+
+            // Receber a mensagem do cliente
+            receberMensagem(cliente, buffer);
+            
+            // Enquanto não receber a mensagem "BYE"
+            while(strcmp(buffer, "BYE") != 0) {
+                // fprintf(out_file, "%s\n", charDestuffing(buffer));
+                fprintf(out_file, "%s\n", buffer);
+                enviarMensagem(cliente, buffer, "ACK");
+                printf("Mensagem recebida e escrita no arquivo: %s\n", buffer);
+                receberMensagem(cliente, buffer);
+            }
+            fclose(out_file);
+        } 
+
+        // Chegou aqui a mensagem é "BYE"
+        if(strcmp(buffer, "BYE")==0){
+            // close connection
+            close(cliente);
+            printf("Cliente desconectado.\n\n");
+        }  
     }
-    printf("Cliente conectado com sucesso!\n");
 
-    // Receber a mensagem "READY" do cliente
-    receberMensagem(cliente, buffer);
-
-    // Enviar a mensagem "READY ACK" para o cliente
-    enviarMensagem(cliente, buffer, "READY ACK");
-
-    // Fechar conexão
-    close(cliente);
-    close(servidor);
-    printf("Conexão fechada com sucesso!\n");
-    
     return 0;
 }
