@@ -8,10 +8,12 @@
 #include <sys/types.h>
 #include <dirent.h>
 #include <stdbool.h>
+#include <sys/time.h>
 
 // Constantes
 const int PORTA = 8489; 
 const char *IP = "127.0.0.1";
+const char *IP6 = "::1";
 const int BUFFER_SIZE = 1024;
 const char *DIRETORIO = "./arquivos";
 
@@ -60,32 +62,58 @@ char *receberMensagem(int socket, char *buffer) {
     return buffer;
 }
 
+void configurarSocketIPv6(int *cliente, struct sockaddr_in6 *cliente_addr) {
+    // 1- Criar um Socket
+    *cliente = socket(AF_INET6, SOCK_STREAM, 0);
+    if (*cliente < 0) {
+        perror("Error ao criar o socket");
+        exit(1);
+    }
+    printf("Cliente IPv6 TCP criado.\n");
+
+    memset(cliente_addr, 0, sizeof(struct sockaddr_in6));
+    cliente_addr->sin6_family = AF_INET6;
+    cliente_addr->sin6_port = htons(PORTA); // Convert port to network byte order
+
+    if (inet_pton(AF_INET6, IP6, &cliente_addr->sin6_addr) <= 0) {
+        perror("[-] Invalid IPv6 address");
+        close(*cliente);
+        exit(1);
+    }
+}
+
+void configurarSocketIPv4(int *cliente, struct sockaddr_in *cliente_addr) {
+    // 1- Criar um Socket
+    *cliente = socket(AF_INET, SOCK_STREAM, 0);
+    if (*cliente < 0){
+        perror("Error ao criar o socket");
+        exit(1);
+    }
+    printf("Cliente IPv4 TCP criado.\n");
+
+    memset(cliente_addr, '\0', sizeof(*cliente_addr));
+    cliente_addr->sin_family = AF_INET;
+    cliente_addr->sin_port = PORTA;
+    cliente_addr->sin_addr.s_addr = inet_addr(IP);
+}
+
 int main() {
     // Declaração de variáveis
     int cliente;
-    struct sockaddr_in server_addr;
+    struct sockaddr_in cliente_addr;
+    struct sockaddr_in6 cliente_addr6;
 
     // Inicializações
     char buffer[BUFFER_SIZE];
 
-    // 1- Criar um socket
-    cliente = socket(AF_INET, SOCK_STREAM, 0);
-    if (cliente < 0) {
-        perror("Erro ao criar o socket-cliente");
-        exit(1);
+    // 1- Criar um Socket e 2- Colocar Conectar
+    if(true){
+        configurarSocketIPv6(&cliente, &cliente_addr6);
+        connect(cliente, (struct sockaddr*)&cliente_addr6, sizeof(cliente_addr6));
+    }else {
+        configurarSocketIPv4(&cliente, &cliente_addr);
+        connect(cliente, (struct sockaddr*)&cliente_addr, sizeof(cliente_addr));
     }
-    printf("Socket-cliente criado com sucesso!\n");
-
-    // 2- Conectar ao servidor
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(PORTA); 
-    server_addr.sin_addr.s_addr = inet_addr(IP); 
-
-    if (connect(cliente, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) { 
-        perror("Erro ao conectar ao servidor");
-        exit(1);
-    }
-    printf("Conexão com o servidor estabelecida com sucesso!\n");
 
     // 3- Enviar a mensagem "READY" para o servidor
     enviarMensagem(cliente, buffer, "READY");

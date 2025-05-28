@@ -10,7 +10,9 @@
 
 // Constantes
 const int PORTA = 8489;
-const int NUM_CLIENTES = 3;
+const char *IP = "127.0.0.1";
+const char *IP6 = "::1";
+const int NUM_MAX_CLIENTES = 5;
 const int BUFFER_SIZE = 1024;
 
 //Funções auxiliares
@@ -56,50 +58,83 @@ char *receberMensagem(int socket, char *buffer) {
     return buffer;
 }
 
+void configurarSocketIPv6(int *servidor, struct sockaddr_in6 *servidor_addr) {
+    // 1- Criar um Socket
+    *servidor = socket(AF_INET6, SOCK_STREAM, 0);
+    if (*servidor < 0) {
+        perror("Error ao criar o socket");
+        exit(1);
+    }
+    printf("Servidor IPv6 TCP criado.\n");
+
+    memset(servidor_addr, 0, sizeof(struct sockaddr_in6));
+    servidor_addr->sin6_family = AF_INET6;
+    servidor_addr->sin6_port = htons(PORTA); 
+    servidor_addr->sin6_addr = in6addr_any; 
+
+    // 2- Colocar no Bind (associar socket a um endereço IP e porta)
+    if (bind(*servidor, (struct sockaddr *)servidor_addr, sizeof(struct sockaddr_in6)) < 0) {
+        perror("Error no bind");
+        close(*servidor);
+        exit(1);
+    }
+    printf("Bind feito na porta: %d\n", PORTA);
+}
+
+void configurarSocketIPv4(int *servidor, struct sockaddr_in *addr) {
+    // 1- Criar um Socket
+    *servidor = socket(AF_INET, SOCK_STREAM, 0);
+    if (*servidor < 0){
+        perror("Error ao criar o socket");
+        exit(1);
+    }
+    printf("Servidor IPv4 TCP criado.\n");
+
+    memset(addr, '\0', sizeof(*addr));
+    addr->sin_family = AF_INET;
+    addr->sin_port = PORTA;
+    addr->sin_addr.s_addr = inet_addr(IP);
+
+    // 2- Colocar no Bind (associar socket a um endereço IP e porta)
+    if (bind(*servidor, (struct sockaddr *)addr, sizeof(struct sockaddr_in)) < 0) {
+        perror("Error no bind");
+        close(*servidor);
+        exit(1);
+    }
+    printf("Bind feito na porta: %d\n", PORTA);
+}
+
 int main() {
     // Declaração de variáveis
-    int servidor, cliente;
+    int servidor, cliente, bytesRecebidos;
     struct sockaddr_in server_addr, cliente_addr;
+    struct sockaddr_in6 server_addr6, cliente_addr6;
 
     // Inicialização
     char buffer[BUFFER_SIZE];
     FILE *out_file;
 
-    // 1- Criar um socket
-    servidor = socket(AF_INET, SOCK_STREAM, 0);
-    if (servidor < 0) {
-        perror("Error ao criar o socket-servidor");
-        exit(1);
+    // 1- Criar um Socket e 2- Colocar no Bind
+    if(true){
+        configurarSocketIPv6(&servidor,&server_addr6);
+    }else {
+        configurarSocketIPv4(&servidor,&server_addr);
     }
-    printf("Socket-servidor criado com sucesso!\n");
-
-    // 2- Colocar no Bind (associar socket a um endereço IP e porta)
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(PORTA);
-    server_addr.sin_addr.s_addr = INADDR_ANY;
-
-    if(bind(servidor, (struct sockaddr *)&server_addr, sizeof(server_addr)) < 0) {
-        perror("Erro ao fazer o bind do socket-servidor");
-        exit(1);
-    }
-    printf("Socket-servidor associado com sucesso!\n");
 
     // 3- Servidor escutando
-    if (listen(servidor, NUM_CLIENTES) < 0) {
-        perror("Erro ao escutar o socket-servidor");
-        exit(1);
-    }
+    listen(servidor, NUM_MAX_CLIENTES);
     printf("Socket-servidor escutando com sucesso na porta %d\n", PORTA);
 
     while(true) {
         // 4- Aceitar conexões de clientes
-        socklen_t cliente_len;
+        socklen_t cliente_addr6_len;
 
-        cliente_len = sizeof(cliente_addr);
-        cliente = accept(servidor, (struct sockaddr*)&cliente_addr, &cliente_len);
-        if (cliente < 0) {
-            perror("Erro ao aceitar conexao do cliente");
-            exit(1);
+        if(true){
+            cliente_addr6_len = sizeof(cliente_addr6);
+            cliente = accept(servidor, (struct sockaddr*)&cliente_addr6, &cliente_addr6_len);        
+        }else {
+            cliente_addr6_len = sizeof(cliente_addr);
+            cliente = accept(servidor, (struct sockaddr*)&cliente_addr, &cliente_addr6_len);
         }
         printf("Cliente conectado com sucesso!\n");
 
