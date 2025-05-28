@@ -14,23 +14,31 @@ const int NUM_CLIENTES = 3;
 const int BUFFER_SIZE = 1024;
 
 //Funções auxiliares
+bool isCharDestuffing(const char *mensagem) {
+    if (strncmp(mensagem, "~", 1) == 0) {
+        return true;
+    }
+    return false;
+}
+
 char *charDestuffing(const char *mensagem) {
-    char *nova_mensagem = NULL;
+    char *novaMensagem = NULL;
     const char *prefixo = "~";
     size_t tamanhoPrefixo = strlen(prefixo);
     size_t tamanhoOriginal = strlen(mensagem);
 
     size_t tamanhoSemPrefixo = tamanhoOriginal - tamanhoPrefixo;
-    nova_mensagem = (char *)malloc(tamanhoSemPrefixo + 1);
+    novaMensagem = (char *)malloc(tamanhoSemPrefixo + 1);
 
-    if (nova_mensagem == NULL) {
+    if (novaMensagem == NULL) {
         perror("Erro ao alocar memoria em charDestuffing (com prefixo)");
         return NULL;
     }
 
-    strcpy(nova_mensagem, mensagem + tamanhoPrefixo);
+    strcpy(novaMensagem, mensagem + tamanhoPrefixo);
+    novaMensagem[tamanhoSemPrefixo] = '\0'; // Garantir terminação
 
-    return nova_mensagem;
+    return novaMensagem;
 }
 
 void enviarMensagem(int socket, char *buffer, char *mensagem) {
@@ -115,13 +123,31 @@ int main() {
             
             // Enquanto não receber a mensagem "BYE"
             while(strcmp(buffer, "BYE") != 0) {
-                // fprintf(out_file, "%s\n", charDestuffing(buffer));
-                fprintf(out_file, "%s\n", buffer);
-                enviarMensagem(cliente, buffer, "ACK");
+                char *nomeArquivoFinal = NULL;
+
+                if (isCharDestuffing(buffer)) {
+                    printf("Detectado byte stuffing, removendo...\n");
+                    nomeArquivoFinal = charDestuffing(buffer);
+                    if (nomeArquivoFinal != NULL) {
+                        printf("Nome original do arquivo: %s\n", nomeArquivoFinal);
+                        fprintf(out_file, "%s\n", nomeArquivoFinal);
+                        free(nomeArquivoFinal); 
+                    } else {
+                        printf("Erro no destuffing, usando nome original\n");
+                        fprintf(out_file, "%s\n", buffer);
+                    }
+                } else {
+                    fprintf(out_file, "%s\n", buffer);
+                }
+
                 printf("Mensagem recebida e escrita no arquivo: %s\n", buffer);
+                fflush(out_file); // Garantir que dados são escritos
+
+                enviarMensagem(cliente, buffer, "ACK");
                 receberMensagem(cliente, buffer);
             }
             fclose(out_file);
+            printf("Arquivo salvo com sucesso!\n");
         } 
 
         // Chegou aqui a mensagem é "BYE"

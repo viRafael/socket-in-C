@@ -16,12 +16,12 @@ const int BUFFER_SIZE = 1024;
 const char *DIRETORIO = "./arquivos";
 
 // Funções auxiliares
-int isByteStuffing(const char *mensagem) { 
+bool isByteStuffing(const char *mensagem) { 
     if ((strcmp(mensagem, "bye") == 0) || (strncmp(mensagem, "~", 1) == 0)) {
-        return 1; 
+        return true; 
     }
 
-    return 0; 
+    return false; 
 }
 
 char *charStuffing(const char *mensagem) {
