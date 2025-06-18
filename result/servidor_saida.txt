@@ -1,0 +1,262 @@
+=== SERVIDOR DE TESTE DE PERFORMANCE ===
+Servidor IPv6 TCP criado.
+Bind feito na porta: 8489
+Socket-servidor escutando com sucesso na porta 8489
+Aguardando conexões de clientes...
+
+=== PROCESSANDO CLIENTE 1 ===
+Mensagem recebida (5 bytes): READY
+Enviando mensagem: READY ACK
+Arquivo criado: localhost_dir_conexao_1.txt
+Mensagem recebida (7 bytes): bye.txt
+Enviando mensagem: ACK
+Mensagem recebida (9 bytes): test2.doc
+Enviando mensagem: ACK
+Mensagem recebida (4 bytes): ~bye
+Detectado byte stuffing, removendo...
+Nome original do arquivo: bye
+Enviando mensagem: ACK
+Mensagem recebida (5 bytes): _.txt
+Enviando mensagem: ACK
+Mensagem recebida (11 bytes): ~~teste.txt
+Detectado byte stuffing, removendo...
+Nome original do arquivo: ~teste.txt
+Enviando mensagem: ACK
+Mensagem recebida (3 bytes): BYE
+Arquivo salvo com sucesso: localhost_dir_conexao_1.txt
+=== ESTATÍSTICAS DA CONEXÃO 1 ===
+Total de bytes recebidos: 44 bytes
+Mensagens processadas: 5
+Tempo de conexão: 1 ms
+Taxa de recepção: 42.97 KB/s
+================================
+Cliente 1 desconectado.
+
+=== PROCESSANDO CLIENTE 2 ===
+Mensagem recebida (5 bytes): READY
+Enviando mensagem: READY ACK
+Arquivo criado: localhost_dir_conexao_2.txt
+Mensagem recebida (1 bytes): a
+Enviando mensagem: ACK
+Mensagem recebida (2 bytes): ab
+Enviando mensagem: ACK
+Mensagem recebida (4 bytes): abcd
+Enviando mensagem: ACK
+Mensagem recebida (8 bytes): abcdefgh
+Enviando mensagem: ACK
+Mensagem recebida (16 bytes): abcdefghijklmnop
+Enviando mensagem: ACK
+Mensagem recebida (32 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (64 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (128 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (256 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (512 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (1024 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (2048 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (4096 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (8192 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (16384 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (32768 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (3 bytes): BYE
+Arquivo salvo com sucesso: localhost_dir_conexao_2.txt
+=== ESTATÍSTICAS DA CONEXÃO 2 ===
+Total de bytes recebidos: 65543 bytes
+Mensagens processadas: 16
+Tempo de conexão: 1 ms
+Taxa de recepção: 64006.84 KB/s
+================================
+Cliente 2 desconectado.
+
+=== PROCESSANDO CLIENTE 3 ===
+Mensagem recebida (5 bytes): READY
+Enviando mensagem: READY ACK
+Arquivo criado: localhost_dir_conexao_3.txt
+Mensagem recebida (1 bytes): a
+Enviando mensagem: ACK
+Mensagem recebida (2 bytes): ab
+Enviando mensagem: ACK
+Mensagem recebida (4 bytes): abcd
+Enviando mensagem: ACK
+Mensagem recebida (8 bytes): abcdefgh
+Enviando mensagem: ACK
+Mensagem recebida (16 bytes): abcdefghijklmnop
+Enviando mensagem: ACK
+Mensagem recebida (32 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (64 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (128 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (256 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (512 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (1024 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (2048 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (4096 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (8192 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (16384 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (32768 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (3 bytes): BYE
+Arquivo salvo com sucesso: localhost_dir_conexao_3.txt
+=== ESTATÍSTICAS DA CONEXÃO 3 ===
+Total de bytes recebidos: 65543 bytes
+Mensagens processadas: 16
+Tempo de conexão: 1 ms
+Taxa de recepção: 64006.84 KB/s
+================================
+Cliente 3 desconectado.
+
+=== PROCESSANDO CLIENTE 4 ===
+Mensagem recebida (5 bytes): READY
+Enviando mensagem: READY ACK
+Arquivo criado: localhost_dir_conexao_4.txt
+Mensagem recebida (1 bytes): a
+Enviando mensagem: ACK
+Mensagem recebida (2 bytes): ab
+Enviando mensagem: ACK
+Mensagem recebida (4 bytes): abcd
+Enviando mensagem: ACK
+Mensagem recebida (8 bytes): abcdefgh
+Enviando mensagem: ACK
+Mensagem recebida (16 bytes): abcdefghijklmnop
+Enviando mensagem: ACK
+Mensagem recebida (32 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (64 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (128 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (256 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (512 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (1024 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (2048 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (4096 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (8192 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (16384 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (32768 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (3 bytes): BYE
+Arquivo salvo com sucesso: localhost_dir_conexao_4.txt
+=== ESTATÍSTICAS DA CONEXÃO 4 ===
+Total de bytes recebidos: 65543 bytes
+Mensagens processadas: 16
+Tempo de conexão: 1 ms
+Taxa de recepção: 64006.84 KB/s
+================================
+Cliente 4 desconectado.
+
+=== PROCESSANDO CLIENTE 5 ===
+Mensagem recebida (5 bytes): READY
+Enviando mensagem: READY ACK
+Arquivo criado: localhost_dir_conexao_5.txt
+Mensagem recebida (1 bytes): a
+Enviando mensagem: ACK
+Mensagem recebida (2 bytes): ab
+Enviando mensagem: ACK
+Mensagem recebida (4 bytes): abcd
+Enviando mensagem: ACK
+Mensagem recebida (8 bytes): abcdefgh
+Enviando mensagem: ACK
+Mensagem recebida (16 bytes): abcdefghijklmnop
+Enviando mensagem: ACK
+Mensagem recebida (32 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (64 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (128 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (256 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (512 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (1024 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (2048 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (4096 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (8192 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (16384 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (32768 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (3 bytes): BYE
+Arquivo salvo com sucesso: localhost_dir_conexao_5.txt
+=== ESTATÍSTICAS DA CONEXÃO 5 ===
+Total de bytes recebidos: 65543 bytes
+Mensagens processadas: 16
+Tempo de conexão: 0 ms
+================================
+Cliente 5 desconectado.
+
+=== PROCESSANDO CLIENTE 6 ===
+Mensagem recebida (5 bytes): READY
+Enviando mensagem: READY ACK
+Arquivo criado: localhost_dir_conexao_6.txt
+Mensagem recebida (1 bytes): a
+Enviando mensagem: ACK
+Mensagem recebida (2 bytes): ab
+Enviando mensagem: ACK
+Mensagem recebida (4 bytes): abcd
+Enviando mensagem: ACK
+Mensagem recebida (8 bytes): abcdefgh
+Enviando mensagem: ACK
+Mensagem recebida (16 bytes): abcdefghijklmnop
+Enviando mensagem: ACK
+Mensagem recebida (32 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (64 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (128 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (256 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (512 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (1024 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (2048 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (4096 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (8192 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (16384 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (32768 bytes): abcdefghijklmnopqrst... [CORTADO]
+Enviando mensagem: ACK
+Mensagem recebida (3 bytes): BYE
+Arquivo salvo com sucesso: localhost_dir_conexao_6.txt
+=== ESTATÍSTICAS DA CONEXÃO 6 ===
+Total de bytes recebidos: 65543 bytes
+Mensagens processadas: 16
+Tempo de conexão: 1 ms
+Taxa de recepção: 64006.84 KB/s
+================================
+Cliente 6 desconectado.

@@ -1,0 +1,945 @@
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: READY...
+Mensagem recebida: READY ACK
+Abrindo diretório: ./arquivos
+Enviando arquivo: bye.txt
+Enviando mensagem: bye.txt...
+Mensagem recebida: ACK
+Enviando arquivo: test2.doc
+Enviando mensagem: test2.doc...
+Mensagem recebida: ACK
+Enviando arquivo: bye
+Enviando mensagem: ~bye...
+Mensagem recebida: ACK
+Enviando arquivo: _.txt
+Enviando mensagem: _.txt...
+Mensagem recebida: ACK
+Enviando arquivo: ~teste.txt
+Enviando mensagem: ~~teste.txt...
+Mensagem recebida: ACK
+Enviando BYE para encerrar...
+Enviando mensagem: BYE...
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 1.79 ms
+Bytes enviados: 44 bytes
+Throughput: 0.19 Mbps
+Throughput: 23.99 KB/s
+================================
+
+=== EXECUTANDO TESTES ADICIONAIS DE PERFORMANCE ===
+
+--- TESTE 1 ---
+Enviando mensagem: READY...
+Mensagem recebida: READY ACK
+
+=== TESTANDO PERFORMANCE COM DIFERENTES TAMANHOS ===
+
+--- Testando tamanho: 1 bytes (2^0) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: a...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.26 ms
+Bytes enviados: 1 bytes
+Throughput: 0.03 Mbps
+Throughput: 3.80 KB/s
+================================
+
+--- Testando tamanho: 2 bytes (2^1) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: ab...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.21 ms
+Bytes enviados: 2 bytes
+Throughput: 0.07 Mbps
+Throughput: 9.17 KB/s
+================================
+
+--- Testando tamanho: 4 bytes (2^2) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcd...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 4 bytes
+Throughput: 0.69 Mbps
+Throughput: 88.78 KB/s
+================================
+
+--- Testando tamanho: 8 bytes (2^3) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefgh...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 8 bytes
+Throughput: 1.61 Mbps
+Throughput: 205.59 KB/s
+================================
+
+--- Testando tamanho: 16 bytes (2^4) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnop...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 16 bytes
+Throughput: 3.05 Mbps
+Throughput: 390.62 KB/s
+================================
+
+--- Testando tamanho: 32 bytes (2^5) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 32 bytes
+Throughput: 5.95 Mbps
+Throughput: 762.20 KB/s
+================================
+
+--- Testando tamanho: 64 bytes (2^6) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 64 bytes
+Throughput: 12.85 Mbps
+Throughput: 1644.74 KB/s
+================================
+
+--- Testando tamanho: 128 bytes (2^7) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 128 bytes
+Throughput: 24.41 Mbps
+Throughput: 3125.00 KB/s
+================================
+
+--- Testando tamanho: 256 bytes (2^8) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 256 bytes
+Throughput: 51.40 Mbps
+Throughput: 6578.95 KB/s
+================================
+
+--- Testando tamanho: 512 bytes (2^9) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 512 bytes
+Throughput: 100.16 Mbps
+Throughput: 12820.51 KB/s
+================================
+
+--- Testando tamanho: 1024 bytes (2^10) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 1024 bytes
+Throughput: 186.01 Mbps
+Throughput: 23809.52 KB/s
+================================
+
+--- Testando tamanho: 2048 bytes (2^11) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 2048 bytes
+Throughput: 355.11 Mbps
+Throughput: 45454.55 KB/s
+================================
+
+--- Testando tamanho: 4096 bytes (2^12) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.06 ms
+Bytes enviados: 4096 bytes
+Throughput: 529.66 Mbps
+Throughput: 67796.61 KB/s
+================================
+
+--- Testando tamanho: 8192 bytes (2^13) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.06 ms
+Bytes enviados: 8192 bytes
+Throughput: 1059.32 Mbps
+Throughput: 135593.22 KB/s
+================================
+
+--- Testando tamanho: 16384 bytes (2^14) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.11 ms
+Bytes enviados: 16384 bytes
+Throughput: 1136.36 Mbps
+Throughput: 145454.55 KB/s
+================================
+
+--- Testando tamanho: 32768 bytes (2^15) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.15 ms
+Bytes enviados: 32768 bytes
+Throughput: 1644.74 Mbps
+Throughput: 210526.32 KB/s
+================================
+Enviando mensagem: BYE...
+
+--- TESTE 2 ---
+Enviando mensagem: READY...
+Mensagem recebida: READY ACK
+
+=== TESTANDO PERFORMANCE COM DIFERENTES TAMANHOS ===
+
+--- Testando tamanho: 1 bytes (2^0) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: a...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.05 ms
+Bytes enviados: 1 bytes
+Throughput: 0.14 Mbps
+Throughput: 18.43 KB/s
+================================
+
+--- Testando tamanho: 2 bytes (2^1) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: ab...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 2 bytes
+Throughput: 0.39 Mbps
+Throughput: 50.08 KB/s
+================================
+
+--- Testando tamanho: 4 bytes (2^2) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcd...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 4 bytes
+Throughput: 0.80 Mbps
+Throughput: 102.80 KB/s
+================================
+
+--- Testando tamanho: 8 bytes (2^3) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefgh...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 8 bytes
+Throughput: 1.61 Mbps
+Throughput: 205.59 KB/s
+================================
+
+--- Testando tamanho: 16 bytes (2^4) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnop...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 16 bytes
+Throughput: 3.13 Mbps
+Throughput: 400.64 KB/s
+================================
+
+--- Testando tamanho: 32 bytes (2^5) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 32 bytes
+Throughput: 6.26 Mbps
+Throughput: 801.28 KB/s
+================================
+
+--- Testando tamanho: 64 bytes (2^6) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 64 bytes
+Throughput: 13.56 Mbps
+Throughput: 1736.11 KB/s
+================================
+
+--- Testando tamanho: 128 bytes (2^7) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 128 bytes
+Throughput: 26.39 Mbps
+Throughput: 3378.38 KB/s
+================================
+
+--- Testando tamanho: 256 bytes (2^8) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 256 bytes
+Throughput: 52.79 Mbps
+Throughput: 6756.76 KB/s
+================================
+
+--- Testando tamanho: 512 bytes (2^9) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 512 bytes
+Throughput: 93.01 Mbps
+Throughput: 11904.76 KB/s
+================================
+
+--- Testando tamanho: 1024 bytes (2^10) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 1024 bytes
+Throughput: 181.69 Mbps
+Throughput: 23255.81 KB/s
+================================
+
+--- Testando tamanho: 2048 bytes (2^11) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 2048 bytes
+Throughput: 355.11 Mbps
+Throughput: 45454.55 KB/s
+================================
+
+--- Testando tamanho: 4096 bytes (2^12) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.05 ms
+Bytes enviados: 4096 bytes
+Throughput: 637.76 Mbps
+Throughput: 81632.65 KB/s
+================================
+
+--- Testando tamanho: 8192 bytes (2^13) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.06 ms
+Bytes enviados: 8192 bytes
+Throughput: 1096.49 Mbps
+Throughput: 140350.88 KB/s
+================================
+
+--- Testando tamanho: 16384 bytes (2^14) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.08 ms
+Bytes enviados: 16384 bytes
+Throughput: 1582.28 Mbps
+Throughput: 202531.65 KB/s
+================================
+
+--- Testando tamanho: 32768 bytes (2^15) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.13 ms
+Bytes enviados: 32768 bytes
+Throughput: 1908.40 Mbps
+Throughput: 244274.81 KB/s
+================================
+Enviando mensagem: BYE...
+
+--- TESTE 3 ---
+Enviando mensagem: READY...
+Mensagem recebida: READY ACK
+
+=== TESTANDO PERFORMANCE COM DIFERENTES TAMANHOS ===
+
+--- Testando tamanho: 1 bytes (2^0) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: a...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.05 ms
+Bytes enviados: 1 bytes
+Throughput: 0.16 Mbps
+Throughput: 19.93 KB/s
+================================
+
+--- Testando tamanho: 2 bytes (2^1) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: ab...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.03 ms
+Bytes enviados: 2 bytes
+Throughput: 0.45 Mbps
+Throughput: 57.44 KB/s
+================================
+
+--- Testando tamanho: 4 bytes (2^2) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcd...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.05 ms
+Bytes enviados: 4 bytes
+Throughput: 0.60 Mbps
+Throughput: 76.59 KB/s
+================================
+
+--- Testando tamanho: 8 bytes (2^3) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefgh...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 8 bytes
+Throughput: 1.65 Mbps
+Throughput: 211.15 KB/s
+================================
+
+--- Testando tamanho: 16 bytes (2^4) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnop...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.03 ms
+Bytes enviados: 16 bytes
+Throughput: 3.70 Mbps
+Throughput: 473.48 KB/s
+================================
+
+--- Testando tamanho: 32 bytes (2^5) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 32 bytes
+Throughput: 6.42 Mbps
+Throughput: 822.37 KB/s
+================================
+
+--- Testando tamanho: 64 bytes (2^6) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 64 bytes
+Throughput: 13.56 Mbps
+Throughput: 1736.11 KB/s
+================================
+
+--- Testando tamanho: 128 bytes (2^7) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 128 bytes
+Throughput: 24.41 Mbps
+Throughput: 3125.00 KB/s
+================================
+
+--- Testando tamanho: 256 bytes (2^8) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 256 bytes
+Throughput: 50.08 Mbps
+Throughput: 6410.26 KB/s
+================================
+
+--- Testando tamanho: 512 bytes (2^9) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 512 bytes
+Throughput: 102.80 Mbps
+Throughput: 13157.89 KB/s
+================================
+
+--- Testando tamanho: 1024 bytes (2^10) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 1024 bytes
+Throughput: 200.32 Mbps
+Throughput: 25641.03 KB/s
+================================
+
+--- Testando tamanho: 2048 bytes (2^11) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 2048 bytes
+Throughput: 355.11 Mbps
+Throughput: 45454.55 KB/s
+================================
+
+--- Testando tamanho: 4096 bytes (2^12) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.05 ms
+Bytes enviados: 4096 bytes
+Throughput: 625.00 Mbps
+Throughput: 80000.00 KB/s
+================================
+
+--- Testando tamanho: 8192 bytes (2^13) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.09 ms
+Bytes enviados: 8192 bytes
+Throughput: 726.74 Mbps
+Throughput: 93023.26 KB/s
+================================
+
+--- Testando tamanho: 16384 bytes (2^14) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.08 ms
+Bytes enviados: 16384 bytes
+Throughput: 1488.10 Mbps
+Throughput: 190476.19 KB/s
+================================
+
+--- Testando tamanho: 32768 bytes (2^15) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.11 ms
+Bytes enviados: 32768 bytes
+Throughput: 2314.81 Mbps
+Throughput: 296296.30 KB/s
+================================
+Enviando mensagem: BYE...
+
+--- TESTE 4 ---
+Enviando mensagem: READY...
+Mensagem recebida: READY ACK
+
+=== TESTANDO PERFORMANCE COM DIFERENTES TAMANHOS ===
+
+--- Testando tamanho: 1 bytes (2^0) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: a...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.06 ms
+Bytes enviados: 1 bytes
+Throughput: 0.13 Mbps
+Throughput: 17.13 KB/s
+================================
+
+--- Testando tamanho: 2 bytes (2^1) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: ab...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 2 bytes
+Throughput: 0.36 Mbps
+Throughput: 46.50 KB/s
+================================
+
+--- Testando tamanho: 4 bytes (2^2) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcd...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 4 bytes
+Throughput: 0.85 Mbps
+Throughput: 108.51 KB/s
+================================
+
+--- Testando tamanho: 8 bytes (2^3) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefgh...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 8 bytes
+Throughput: 1.65 Mbps
+Throughput: 211.15 KB/s
+================================
+
+--- Testando tamanho: 16 bytes (2^4) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnop...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 16 bytes
+Throughput: 3.21 Mbps
+Throughput: 411.18 KB/s
+================================
+
+--- Testando tamanho: 32 bytes (2^5) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 32 bytes
+Throughput: 6.98 Mbps
+Throughput: 892.86 KB/s
+================================
+
+--- Testando tamanho: 64 bytes (2^6) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 64 bytes
+Throughput: 13.20 Mbps
+Throughput: 1689.19 KB/s
+================================
+
+--- Testando tamanho: 128 bytes (2^7) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 128 bytes
+Throughput: 25.04 Mbps
+Throughput: 3205.13 KB/s
+================================
+
+--- Testando tamanho: 256 bytes (2^8) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 256 bytes
+Throughput: 48.83 Mbps
+Throughput: 6250.00 KB/s
+================================
+
+--- Testando tamanho: 512 bytes (2^9) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.03 ms
+Bytes enviados: 512 bytes
+Throughput: 118.37 Mbps
+Throughput: 15151.52 KB/s
+================================
+
+--- Testando tamanho: 1024 bytes (2^10) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 1024 bytes
+Throughput: 186.01 Mbps
+Throughput: 23809.52 KB/s
+================================
+
+--- Testando tamanho: 2048 bytes (2^11) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 2048 bytes
+Throughput: 372.02 Mbps
+Throughput: 47619.05 KB/s
+================================
+
+--- Testando tamanho: 4096 bytes (2^12) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.05 ms
+Bytes enviados: 4096 bytes
+Throughput: 664.89 Mbps
+Throughput: 85106.38 KB/s
+================================
+
+--- Testando tamanho: 8192 bytes (2^13) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.06 ms
+Bytes enviados: 8192 bytes
+Throughput: 1041.67 Mbps
+Throughput: 133333.33 KB/s
+================================
+
+--- Testando tamanho: 16384 bytes (2^14) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.08 ms
+Bytes enviados: 16384 bytes
+Throughput: 1644.74 Mbps
+Throughput: 210526.32 KB/s
+================================
+
+--- Testando tamanho: 32768 bytes (2^15) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.11 ms
+Bytes enviados: 32768 bytes
+Throughput: 2252.25 Mbps
+Throughput: 288288.29 KB/s
+================================
+Enviando mensagem: BYE...
+
+--- TESTE 5 ---
+Enviando mensagem: READY...
+Mensagem recebida: READY ACK
+
+=== TESTANDO PERFORMANCE COM DIFERENTES TAMANHOS ===
+
+--- Testando tamanho: 1 bytes (2^0) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: a...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.06 ms
+Bytes enviados: 1 bytes
+Throughput: 0.14 Mbps
+Throughput: 17.76 KB/s
+================================
+
+--- Testando tamanho: 2 bytes (2^1) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: ab...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 2 bytes
+Throughput: 0.44 Mbps
+Throughput: 55.80 KB/s
+================================
+
+--- Testando tamanho: 4 bytes (2^2) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcd...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 4 bytes
+Throughput: 0.74 Mbps
+Throughput: 95.27 KB/s
+================================
+
+--- Testando tamanho: 8 bytes (2^3) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefgh...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 8 bytes
+Throughput: 1.61 Mbps
+Throughput: 205.59 KB/s
+================================
+
+--- Testando tamanho: 16 bytes (2^4) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnop...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 16 bytes
+Throughput: 3.49 Mbps
+Throughput: 446.43 KB/s
+================================
+
+--- Testando tamanho: 32 bytes (2^5) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 32 bytes
+Throughput: 6.10 Mbps
+Throughput: 781.25 KB/s
+================================
+
+--- Testando tamanho: 64 bytes (2^6) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.03 ms
+Bytes enviados: 64 bytes
+Throughput: 14.80 Mbps
+Throughput: 1893.94 KB/s
+================================
+
+--- Testando tamanho: 128 bytes (2^7) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 128 bytes
+Throughput: 27.90 Mbps
+Throughput: 3571.43 KB/s
+================================
+
+--- Testando tamanho: 256 bytes (2^8) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.03 ms
+Bytes enviados: 256 bytes
+Throughput: 57.44 Mbps
+Throughput: 7352.94 KB/s
+================================
+
+--- Testando tamanho: 512 bytes (2^9) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.03 ms
+Bytes enviados: 512 bytes
+Throughput: 114.89 Mbps
+Throughput: 14705.88 KB/s
+================================
+
+--- Testando tamanho: 1024 bytes (2^10) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 1024 bytes
+Throughput: 211.15 Mbps
+Throughput: 27027.03 KB/s
+================================
+
+--- Testando tamanho: 2048 bytes (2^11) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 2048 bytes
+Throughput: 411.18 Mbps
+Throughput: 52631.58 KB/s
+================================
+
+--- Testando tamanho: 4096 bytes (2^12) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.04 ms
+Bytes enviados: 4096 bytes
+Throughput: 694.44 Mbps
+Throughput: 88888.89 KB/s
+================================
+
+--- Testando tamanho: 8192 bytes (2^13) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.06 ms
+Bytes enviados: 8192 bytes
+Throughput: 1077.59 Mbps
+Throughput: 137931.03 KB/s
+================================
+
+--- Testando tamanho: 16384 bytes (2^14) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.10 ms
+Bytes enviados: 16384 bytes
+Throughput: 1315.79 Mbps
+Throughput: 168421.05 KB/s
+================================
+
+--- Testando tamanho: 32768 bytes (2^15) ---
+=== INICIANDO MEDIÇÃO DE PERFORMANCE ===
+Enviando mensagem: abcdefghijklmnopqrst...
+Mensagem recebida: ACK
+=== RESULTADOS DA MEDIÇÃO ===
+Tempo total: 0.15 ms
+Bytes enviados: 32768 bytes
+Throughput: 1689.19 Mbps
+Throughput: 216216.22 KB/s
+================================
+Enviando mensagem: BYE...
+Testes de performance concluídos!
